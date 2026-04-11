@@ -1,7 +1,7 @@
 # JDBC Class Library Project
 **Group Number:** [Your Group Number]  
 **Course:** CSCI 331  
-**Date:** [Date]  
+**Date:** 4/08/2026  
 
 ---
 
@@ -39,10 +39,6 @@ JDBC_Project/
 3. Update `ConnectionConfig.java` with your database credentials
 4. Compile and run
 
-## AI Tools Disclosure
-| Tool Used | Purpose | Team Member |
-|-----------|---------|-------------|
-| [e.g., Claude.ai] | [e.g., Helped structure DAO pattern] | [Name] |
 
 ## YouTube Video
 [Link to 15-20 minute video]
