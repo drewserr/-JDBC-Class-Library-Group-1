@@ -30,4 +30,4 @@
 5. Compile and run the UI:# -JDBC-Class-Library-Group-1
 
 6. ## YouTube Video
-[Link to video](INSERT_LINK_HERE)
+[Link to video]https://youtu.be/st40Hz-ofKw
