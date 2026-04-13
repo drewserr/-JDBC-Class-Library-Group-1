@@ -3,17 +3,7 @@ package jdbc;
 import jdbc.connection.ConnectionConfig;
 import jdbc.connection.DatabaseConnection;
 
-/**
- * DatabaseConnectionTest.java
- * Tests for the connection classes.
- * 
- * To run: make sure SQL Server Express is running, then:
- *   javac -cp "lib/*" -d out src/main/java/jdbc/connection/*.java src/main/java/jdbc/exception/*.java src/test/java/jdbc/DatabaseConnectionTest.java
- *   java -cp "out;lib/*" jdbc.DatabaseConnectionTest
- * 
- * @author Andrew Laboy
- * @version 1.0
- */
+
 public class DatabaseConnectionTest {
 
     public static void testDefaultConfig() {
