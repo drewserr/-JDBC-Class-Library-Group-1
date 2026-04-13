@@ -1,12 +1,4 @@
 package jdbc.exception;
-
-/**
- * DatabaseException.java
- * Custom exception for database errors.
- * 
- * @author Andrew Laboy
- * @version 1.0
- */
 public class DatabaseException extends Exception {
 
     private String operation;

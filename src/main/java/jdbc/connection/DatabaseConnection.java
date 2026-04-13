@@ -6,48 +6,36 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * DatabaseConnection.java
- * Handles creating and managing connections to SQL Server Express.
- * Uses Windows Authentication and includes a simple connection pool.
- * 
- * @author Andrew Laboy
- * @version 1.0
- * 
- * AI Disclosure: Claude.ai was used to help structure the connection pooling logic.
- */
+
+
 public class DatabaseConnection {
 
     private ConnectionConfig config;
     private List<Connection> connectionPool;
     private int poolSize;
 
-    // Default constructor
+  
     public DatabaseConnection() {
         this.config = new ConnectionConfig();
         this.poolSize = 5;
         this.connectionPool = new ArrayList<>();
     }
 
-    // Custom config constructor
+   
     public DatabaseConnection(ConnectionConfig config) {
         this.config = config;
         this.poolSize = 5;
         this.connectionPool = new ArrayList<>();
     }
 
-    // Custom config and pool size constructor
+   
     public DatabaseConnection(ConnectionConfig config, int poolSize) {
         this.config = config;
         this.poolSize = poolSize;
         this.connectionPool = new ArrayList<>();
     }
 
-    /**
-     * Gets a connection. Reuses one from the pool if available,
-     * otherwise creates a new one. No username/password needed
-     * since we use Windows Authentication.
-     */
+  
     public Connection getConnection() throws SQLException {
         // Check pool for a usable connection
         for (int i = 0; i < connectionPool.size(); i++) {
@@ -58,7 +46,7 @@ public class DatabaseConnection {
             }
         }
 
-        // Create a new connection using Windows Auth
+        -
         try {
             Connection conn = DriverManager.getConnection(config.getConnectionUrl());
             System.out.println("Connected to " + config.getDatabaseName() + " successfully.");
@@ -69,9 +57,7 @@ public class DatabaseConnection {
         }
     }
 
-    /**
-     * Returns a connection to the pool. If pool is full, closes it instead.
-     */
+   
     public void releaseConnection(Connection conn) {
         if (conn == null) return;
 
@@ -88,9 +74,7 @@ public class DatabaseConnection {
         }
     }
 
-    /**
-     * Closes all connections in the pool.
-     */
+    
     public void closeAllConnections() {
         for (Connection conn : connectionPool) {
             try {
@@ -105,9 +89,7 @@ public class DatabaseConnection {
         System.out.println("All connections closed.");
     }
 
-    /**
-     * Quick test to check if the database is reachable.
-     */
+   
     public boolean testConnection() {
         try {
             Connection conn = getConnection();
