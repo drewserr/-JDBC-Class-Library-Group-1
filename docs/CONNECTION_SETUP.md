@@ -1,4 +1,4 @@
-# JDBC Connection Setup - Documentation
+z`# JDBC Connection Setup - Documentation
 
 **Author:** Andrew Laboy  
 **Version:** 1.0  
@@ -72,8 +72,3 @@ javac -cp "lib/*" -d out src/main/java/jdbc/connection/*.java src/main/java/jdbc
 java -cp "out;lib/*" jdbc.DatabaseConnectionTest
 ```
 
----
-
-## AI Disclosure
-
-Claude.ai was used to help structure the connection pooling logic and class documentation.
