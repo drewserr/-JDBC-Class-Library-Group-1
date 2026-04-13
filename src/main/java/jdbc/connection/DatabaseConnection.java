@@ -46,7 +46,7 @@ public class DatabaseConnection {
             }
         }
 
-        -
+    
         try {
             Connection conn = DriverManager.getConnection(config.getConnectionUrl());
             System.out.println("Connected to " + config.getDatabaseName() + " successfully.");
